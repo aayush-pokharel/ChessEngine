@@ -24,7 +24,6 @@ namespace Assets.Scripts.board
         private Board(Builder builder)
         {
             //Create new gameboard with builder
-            //uigib
             this.gameBoard = createGameBoard(builder);
             //white and black active pieces
             this.whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE);
