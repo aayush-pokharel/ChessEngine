@@ -58,7 +58,7 @@ namespace Assets.Scripts.board
             return builder.ToString();
         }
         /// <summary>
-        /// get the white player
+        /// get white player
         /// </summary>
         /// <returns></returns>
         public Player getWhitePlayer()

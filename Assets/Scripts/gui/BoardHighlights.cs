@@ -49,6 +49,8 @@ public class BoardHighlights : MonoBehaviour
             }
         }
     }
+
+    //Hide move highlights
     public void hideHighlights()
     {
         foreach(GameObject go in highlights)
