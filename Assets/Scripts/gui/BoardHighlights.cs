@@ -14,6 +14,7 @@ public class BoardHighlights : MonoBehaviour
         highlights = new List<GameObject>();
     }
 
+    //Get highlight object
     private GameObject getHighlightObject()
     {
         GameObject go = highlights.Find(g => !g.activeSelf);
@@ -24,6 +25,8 @@ public class BoardHighlights : MonoBehaviour
         }
         return go;
     }
+
+    //Highlights available moves for piece 
     public void highlightAllowedMoves(bool[,] moves)
     {
         for(int i = 0; i < 8; i++)
