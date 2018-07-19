@@ -8,6 +8,7 @@ using static Assets.Scripts.board.Move;
 
 namespace Assets.Scripts.pieces
 {
+    //Create the bishop piece 
     public class Bishop : Piece
     {
         private readonly static int[] CANDIDATE_MOVE_COORDINATES =
