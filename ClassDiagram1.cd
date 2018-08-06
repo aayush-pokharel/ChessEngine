@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Assets.Scripts.board.Board" Collapsed="true">
+    <Position X="8.75" Y="7.75" Width="1.5" />
+    <AssociationLine Name="whitePlayer" Type="Assets.Scripts.player.WhitePlayer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.25" Y="8.125" />
+        <Point X="15" Y="8.125" />
+        <Point X="15" Y="7.691" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="blackPlayer" Type="Assets.Scripts.player.BlackPlayer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.25" Y="7.875" />
+        <Point X="12.625" Y="7.875" />
+        <Point X="12.625" Y="7.691" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="currentPlayer" Type="Assets.Scripts.player.Player" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.906" Y="7.75" />
+        <Point X="9.906" Y="5.688" />
+        <Point X="13.25" Y="5.688" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="enPassantPawn" Type="Assets.Scripts.pieces.Pawn" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="7.938" />
+        <Point X="3.906" Y="7.938" />
+        <Point X="3.906" Y="12.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="transitionMove" Type="Assets.Scripts.board.Move" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="8.188" />
+        <Point X="6.75" Y="8.188" />
+        <Point X="6.75" Y="8.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AQwCQAAEAkAAAAAEAFAAAAAAghAAgACAABAQAAEQCAA=</HashCode>
+      <FileName>Assets\Scripts\board\Board.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="whitePlayer" />
+      <Field Name="blackPlayer" />
+      <Field Name="currentPlayer" />
+      <Field Name="enPassantPawn" />
+      <Field Name="transitionMove" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Assets.Scripts.board.BoardUtils" Collapsed="true">
+    <Position X="17.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARCAABABAAIAEABAwABABAAoGAAEAAA4ABAgIAgCAAA=</HashCode>
+      <FileName>Assets\Scripts\board\BoardUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.board.Move" Collapsed="true">
+    <Position X="6" Y="8.75" Width="1.5" />
+    <AssociationLine Name="board" Type="Assets.Scripts.board.Board" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="8.875" />
+        <Point X="9.5" Y="8.875" />
+        <Point X="9.5" Y="8.312" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="movedPiece" Type="Assets.Scripts.pieces.Piece" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="9.25" />
+        <Point X="7.875" Y="9.25" />
+        <Point X="7.875" Y="11.109" />
+        <Point X="7.5" Y="11.109" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAHAAAABAAIQAAAAgAAEAAAAQAAAAZAgIAAAAAQAACI=</HashCode>
+      <FileName>Assets\Scripts\board\Move.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="board" />
+      <Field Name="movedPiece" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Assets.Scripts.board.Tile" Collapsed="true">
+    <Position X="15.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAEAAAAAAEAAAAIAAAAAAAAAACBAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\board\Tile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoardHighlights" Collapsed="true">
+    <Position X="9.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAgACAAIQAAAAgAAQAA=</HashCode>
+      <FileName>Assets\Scripts\gui\BoardHighlights.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.gui.BoardManager" Collapsed="true">
+    <Position X="12.5" Y="9.75" Width="1.5" />
+    <AssociationLine Name="board" Type="Assets.Scripts.board.Board" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.25" Y="9.75" />
+        <Point X="13.25" Y="8.25" />
+        <Point X="10.25" Y="8.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="moveLog" Type="Assets.Scripts.gui.MoveLog" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14" Y="9.875" />
+        <Point X="15.75" Y="9.875" />
+        <Point X="15.75" Y="9.312" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="selectedChessPiece" Type="Assets.Scripts.gui.ChessPiece" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.125" Y="10.441" />
+        <Point X="13.125" Y="14.642" />
+        <Point X="8" Y="14.642" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="sourceTile" Type="Assets.Scripts.board.Tile" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14" Y="10.375" />
+        <Point X="15.844" Y="10.375" />
+        <Point X="15.844" Y="11.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="destinationTile" Type="Assets.Scripts.board.Tile" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14" Y="10.125" />
+        <Point X="16.25" Y="10.125" />
+        <Point X="16.25" Y="11.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="movedPiece" Type="Assets.Scripts.pieces.Piece" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.812" Y="10.441" />
+        <Point X="12.812" Y="11.5" />
+        <Point X="7.5" Y="11.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="computerMove" Type="Assets.Scripts.board.Move" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.875" Y="9.75" />
+        <Point X="12.875" Y="9.062" />
+        <Point X="7.5" Y="9.062" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="gameSetup" Type="Assets.Scripts.gui.GameSetup" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14" Y="10" />
+        <Point X="17.875" Y="10" />
+        <Point X="17.875" Y="9.312" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="chessPieces" Type="Assets.Scripts.gui.ChessPiece" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.562" Y="10.441" />
+        <Point X="13.562" Y="14.846" />
+        <Point X="8" Y="14.846" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ICQgQDACiCABCAAAOBAAAAoCACIIAWDAYQVAoAA0GAA=</HashCode>
+      <FileName>Assets\Scripts\gui\BoardManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="board" />
+      <Field Name="moveLog" />
+      <Field Name="selectedChessPiece" />
+      <Field Name="sourceTile" />
+      <Field Name="destinationTile" />
+      <Field Name="movedPiece" />
+      <Field Name="computerMove" />
+      <Field Name="aiMove" />
+      <Field Name="gameSetup" />
+      <Property Name="Instance" />
+      <Property Name="chessPieces" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Assets.Scripts.gui.MoveLog" Collapsed="true">
+    <Position X="15" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAABAAAAIAAAAAAQAAAQAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\gui\BoardManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.gui.ChessPiece" Collapsed="true">
+    <Position X="6.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAgCAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\gui\ChessPiece.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.gui.GameSetup" Collapsed="true">
+    <Position X="17" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAgAAAAAAAAAAAACAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\gui\GameSetup.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="blackPlayerType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Assets.Scripts.gui.GuiBishop" Collapsed="true">
+    <Position X="3.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\gui\GuiBishop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.gui.GuiKing" Collapsed="true">
+    <Position X="7.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\gui\GuiKing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.gui.GuiKnight" Collapsed="true">
+    <Position X="12.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\gui\GuiKnight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.gui.GuiPawn" Collapsed="true">
+    <Position X="1" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\gui\GuiPawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.gui.GuiQueen" Collapsed="true">
+    <Position X="5.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\gui\GuiQueen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.gui.GuiRook" Collapsed="true">
+    <Position X="10" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\gui\GuiRook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Job" Collapsed="true">
+    <Position X="15.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAIAAACAAAIAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\job\Job.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThreadedJob" Collapsed="true">
+    <Position X="15.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAGAAACAQAAAAAEAAAAAACAAAAAAAAAggAAI=</HashCode>
+      <FileName>Assets\Scripts\job\ThreadedJob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.pieces.Bishop" Collapsed="true">
+    <Position X="0.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAIEgAAAAAAAgAgAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\pieces\Bishop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.pieces.King" Collapsed="true">
+    <Position X="5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgEAAAIAAAAAAAIEAAAAQIARwAgAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\pieces\King.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.pieces.Knight" Collapsed="true">
+    <Position X="9.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAACAQQAAAAAIEAAAAAIAAgAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\pieces\Knight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.pieces.Pawn" Collapsed="true">
+    <Position X="2.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEAAAAAAAAAAAIEAAAAAAAAgAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\pieces\Pawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.pieces.Piece" Collapsed="true">
+    <Position X="6" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIABEAAACECIQgAAABAAAgAgEAIAAAAAQAAAIACA=</HashCode>
+      <FileName>Assets\Scripts\pieces\Piece.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pieceType" />
+      <Field Name="pieceAlliance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Assets.Scripts.pieces.PieceTypeMethod" Collapsed="true">
+    <Position X="4.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAQAAAAACAAAAAAAAAAAAABIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\pieces\Piece.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.pieces.Queen" Collapsed="true">
+    <Position X="7.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAIEgAAAAAAAgAgAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\pieces\Queen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.pieces.Rook" Collapsed="true">
+    <Position X="11.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAIEgAAAAAAAgAgAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\pieces\Rook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.player.ai.AlphaBeta" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEABAAgAQAAAEAAAEAAAAABAgAAAAAAAAAMAgA6A=</HashCode>
+      <FileName>Assets\Scripts\player\ai\AlphaBeta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="boardEvaluator" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Assets.Scripts.player.ai.MiniMax" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAgAQAAAEAAAEAAAAAAAgAAAAAAAAAEAgACA=</HashCode>
+      <FileName>Assets\Scripts\player\ai\MiniMax.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="boardEvaluator" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Assets.Scripts.player.ai.SorterMethods" Collapsed="true">
+    <Position X="13" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\player\ai\MoveSorter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.player.ai.MoveComparer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\player\ai\MoveSorter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Assets.Scripts.player.ai.BoolComparer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\player\ai\MoveSorter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Assets.Scripts.player.ai.StandardBoardEvaluator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAQQEQAAQAIAAEAAAAgAAAAAAIAEACAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\player\ai\StandardBoardEvaluator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.238" />
+  </Class>
+  <Class Name="Assets.Scripts.player.BlackPlayer" Collapsed="true">
+    <Position X="12" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\player\BlackPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.player.MoveStatusMethods" Collapsed="true">
+    <Position X="19.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\player\MoveStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.player.MoveTransition" Collapsed="true">
+    <Position X="22" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\player\MoveTransition.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="moveStatus" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Assets.Scripts.player.Player" Collapsed="true">
+    <Position X="13.25" Y="5.25" Width="1.5" />
+    <AssociationLine Name="board" Type="Assets.Scripts.board.Board" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.25" Y="5.5" />
+        <Point X="9.5" Y="5.5" />
+        <Point X="9.5" Y="7.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BgAAEAAEQAAACARBIAAAAAAAAAJABAAAIAIEAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\player\Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="board" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Assets.Scripts.player.WhitePlayer" Collapsed="true">
+    <Position X="14.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\player\WhitePlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Assets.Scripts.player.ai.IBoardEvaluator" Collapsed="true">
+    <Position X="18" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\player\ai\IBoardEvaluator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Assets.Scripts.player.ai.IMoveStrategy" Collapsed="true">
+    <Position X="19.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\player\ai\IMoveStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Assets.Scripts.gui.PlayerType" Collapsed="true">
+    <Position X="19" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\gui\PlayerType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Assets.Scripts.pieces.PieceType" Collapsed="true">
+    <Position X="4.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAgBAAAg=</HashCode>
+      <FileName>Assets\Scripts\pieces\Piece.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Assets.Scripts.player.ai.MoveSorter" Collapsed="true">
+    <Position X="18" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\player\ai\MoveSorter.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Assets.Scripts.player.MoveStatus" Collapsed="true">
+    <Position X="19.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAQAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\player\MoveStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Assets.Scripts.Alliance" Collapsed="true">
+    <Position X="6" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Alliance.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
